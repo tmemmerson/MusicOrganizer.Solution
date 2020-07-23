@@ -5,15 +5,15 @@ using System.Collections.Generic;
 namespace MusicOrganizer.Controllers
 {
 
-  public class AlbumController : Controller
+  public class AlbumsController : Controller
 {
-  [HttpGet("/artists/{artistId}/albums/{albumId}")]
+  [HttpGet("/artists/{artistId}/albums/new")]
   public ActionResult New(int artistId)
   {
     Artist artist = Artist.Find(artistId);
     return View(artist);
   }
-
+  [HttpGet("/artists/{artistId}/albums/{albumId}")]
   public ActionResult Show(int artistId, int albumId)
   {
     Album album = Album.Find(albumId);
