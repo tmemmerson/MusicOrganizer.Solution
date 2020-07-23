@@ -55,7 +55,7 @@ _Github [repository](https://github.com/tmemmerson/MusicOrganizer.Solution.git)_
 
 * Step 2: commit that .gitignore file (this prevents your sensitive information like your API key being shown to others). **DO NOT PROCEED TO STEP 3 UNTIL YOU DO THIS!**
 
-![setup](https://coding-assets.s3-us-west-2.amazonaws.com/img/readme-image.jpg "Set up instructions")
+![setup](https://coding-assets.s3-us-west-2.amazonaws.com/img/readme-image-3.jpg "Set up instructions")
 
 <br>
 
