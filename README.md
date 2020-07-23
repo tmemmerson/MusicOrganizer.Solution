@@ -22,7 +22,9 @@ _discography application written in c#_
 
 | Spec 	| Input 	| Output 	|
 |-	|-	|-	|
-
+| user can submit a new artist to catalog 	| [add artist] 	| artist: Michael Jackson 	|
+| user can submit a new album to catalog 	| [add album] 	| album: Thriller 	|
+| user can retrieve catalog data 	| find albums by: Michael Jackson 	| Thriller 	|
 
 <br>
 
