@@ -5,7 +5,7 @@ using MusicOrganizer.Models;
 
 namespace MusicOrganizer.Controllers
 {
-  public class ArtistController : Controller
+  public class ArtistsController : Controller
   {
     [HttpGet("/artists")]
     public ActionResult Index()
@@ -24,7 +24,7 @@ namespace MusicOrganizer.Controllers
       Artist newArtist = new Artist(artistName);
       return RedirectToAction("Index");
     }
-    [HttpGet("/artist/{id}")]
+    [HttpGet("/artists/{id}")]
     public ActionResult Show(int id)
     {
       Dictionary <string, object> model = new Dictionary<string, object> ();
@@ -33,6 +33,19 @@ namespace MusicOrganizer.Controllers
       model.Add("artist", newArtist);
       model.Add("albums", artistAlbums);
       return View(model);
+    }
+
+    [HttpPost("/artists/{artistId}/albums")]
+    public ActionResult Create(int artistId, string albumTitle)
+    {
+      Dictionary<string, object> model = new Dictionary<string, object>();
+      Artist foundArtist = Artist.Find(artistId);
+      Album newAlbum = new Album(albumTitle);
+      foundArtist.AddAlbum(newAlbum);
+      List<Album> artistAlbums = foundArtist.Albums;
+      model.Add("albums", artistAlbums);
+      model.Add("artist", foundArtist);
+      return View("Show", model);
     }
   }
 }
