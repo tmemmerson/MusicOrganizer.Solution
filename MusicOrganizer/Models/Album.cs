@@ -31,5 +31,9 @@ namespace MusicOrganizer.Models
       return _instances[searchId -1];
     }
 
+    public static void DeleteAlbum(int searchId)
+    {
+      _instances.RemoveAt(searchId -1);
+    }
   }
 }

@@ -27,9 +27,9 @@ namespace MusicOrganizer.Models
     {
       return _instances;
     }
-    public static Artist Find(int searchId)
+    public static Artist Find(int searchId) 
     {
-      return _instances[searchId -1];
+      return _instances[searchId - 1];
     }
 
     public void AddAlbum(Album album)
